@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #f5f7fa;
+}
+
+/* NAVBAR */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: white;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-box{
+    display: flex;
+    gap: 20px;
+    background: #e0e0e0;
+    padding: 8px 20px;
+    border-radius: 15px;
+}
+
+.menu-box a{
+    text-decoration: none;
+    color: #555;
+}
+
+.menu-box a:hover{
+    color: #2f80ed;
+}
+
+.brand-name{
+    font-size: 40px;
+    font-weight: bold;
+    color: #2f80ed;
+}
+
+.tagline{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* BUTTON */
+nav button{
+    padding: 10px 18px;
+    border: none;
+    background: #2f80ed;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero{
+    background: #2f80ed;
+    color: white;
+    padding: 80px 20px;
+}
+
+.hero h1{
+    font-size: 42px;
+}
+
+/* SEARCH */
+.search-box{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.search-box input{
+    padding: 14px;
+    width: 250px;
+    border: none;
+    border-radius: 6px;
+}
+
+.search-box button{
+    padding: 14px 20px;
+    border: none;
+    background: #27ae60;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* FEATURES */
+.features{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: -60px;
+    padding: 40px;
+}
+
+.feature-card{
+    background: white;
+    width: 260px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.feature-card h3{
+    margin-bottom: 10px;
+}
+
+.feature-card p{
+    color: #6c757d;
+}
+
+/* RESULT CARD */
+.card{
+    background: white;
+    width: 260px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
