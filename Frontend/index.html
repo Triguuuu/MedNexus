@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedNexus</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav>
-    <div class="logo-container">
-        <h1 class="brand-name">MedNexus</h1>
-        <span class="tagline">Maximizing Care Not Chaos</span>
-    </div>
-
-    <div class="nav-right">
-        <div class="menu-box">
-            <a href="#">FAQ</a>
+    <nav>
+        <div class="logo-container">
+            <h1 class="brand-name">MedNexus</h1>
+            <span class="tagline">Maximizing Care Not Chaos</span>
         </div>
 
-        <div class="menu-box">
-            <a href="#">About Us</a>
+        <div class="nav-right">
+            <div class="menu-box">
+                <a href="#">FAQ</a>
+            </div>
+
+            <div class="menu-box">
+                <a href="#">About Us</a>
+            </div>
         </div>
-    </div>
 
-    <button class="login-btn">Login</button>
-</nav>
+        <button class="login-btn">Login</button>
+    </nav>
 
-<section class="hero">
-    <div class="hero-text">
-        <h1>Find <span>Hospitals</span><br>Smartly & Instantly</h1>
-        <p>AI-powered platform to manage hospital resources</p>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Find <span>Hospitals</span><br>Smartly & Instantly</h1>
+            <p>AI-powered platform to manage hospital resources</p>
 
-        <div class="search-box">
-            <input type="text" placeholder="Search hospitals....">
+            <div class="search-box">
+                <input type="text" placeholder="Search hospitals....">
+                <button onclick="sendEmergency()" style="margin-top:20px;">
+                     Send Emergency
+                </button>
+
+                <div id="result" style="margin-top:20px; font-size:18px;"></div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="features">
-    <!-- Results will come here -->
-</section>
+    <section class="map-section">
+        <h2 style="text-align:center; margin:20px;"> Nearby Hospitals</h2>
+        <div id="map"></div>
+        <button onclick="addTestData()">Add Test Hospitals</button>
+    </section>
 
-<script src="script.js"></script>
+    <section class="features">
+        <div id="result"></div>
+        <!-- Results will come here -->
+    </section>
 
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

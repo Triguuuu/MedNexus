@@ -129,3 +129,16 @@ nav button{
     border-radius: 10px;
     margin: 10px;
 }
+
+/* Map */
+
+.map-section {
+    padding: 20px;
+}
+
+#map {
+    height: 400px;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+}

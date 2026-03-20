@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Dashboard</title>
+</head>
+<body>
+
+<h1>🚨 Live Emergency Alerts</h1>
+
+<div id="alerts"></div>
+
+<script>
+console.log("Hospital page loaded")
+
+const socket = new WebSocket("ws://127.0.0.1:3000")
+
+socket.onopen = () => {
+    console.log("✅ Connected to server")
+}
+
+socket.onerror = (err) => {
+    console.log("❌ WebSocket error", err)
+}
+
+socket.onmessage = (event) => {
+    console.log("📩 Message received:", event.data)
+
+    const data = JSON.parse(event.data)
+
+    if(data.type === "EMERGENCY"){
+        document.getElementById("alerts").innerHTML += `
+        <div>
+            <h3>🚨 Emergency</h3>
+            <p>Patient: ${data.patientLocation.lat}, ${data.patientLocation.lng}</p>
+            <p>Hospital: ${data.hospital.name}</p>
+            <p>Distance: ${data.hospital.distance.toFixed(2)} km</p>
+        </div>
+        <hr>
+        `
+    }
+}
+</script>
+
+</body>
+</html>
